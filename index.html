@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookify - Publica y Lee Libros</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bookify</h1>
+        <nav>
+            <ul>
+                <li><a href="#catalog">Catálogo</a></li>
+                <li><a href="#upload">Publicar un Libro</a></li>
+                <li><select id="language-selector">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <h2>Bienvenido a Bookify</h2>
+            <p>Descubre y publica libros en múltiples idiomas.</p>
+        </section>
+
+        <!-- Catalog Section -->
+        <section id="catalog">
+            <h2>Catálogo de Libros</h2>
+            <div class="book-list">
+                <!-- Example books -->
+                <div class="book-item">
+                    <img src="https://via.placeholder.com/150" alt="Portada del libro">
+                    <h3>Título del Libro</h3>
+                    <button onclick="readBook()">Leer</button>
+                </div>
+                <div class="book-item">
+                    <img src="https://via.placeholder.com/150" alt="Portada del libro">
+                    <h3>Otro Libro</h3>
+                    <button onclick="readBook()">Leer</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upload Section -->
+        <section id="upload">
+            <h2>Publica tu Libro</h2>
+            <form id="upload-form">
+                <label for="title">Título:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="description">Descripción:</label>
+                <textarea id="description" name="description" required></textarea>
+
+                <label for="file">Archivo del libro (PDF):</label>
+                <input type="file" id="file" name="file" accept="application/pdf" required>
+
+                <label for="language">Idioma:</label>
+                <input type="text" id="language" name="language" required>
+
+                <button type="submit">Subir Libro</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bookify. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
